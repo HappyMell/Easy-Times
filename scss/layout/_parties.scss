@@ -1,0 +1,71 @@
+.party {
+  padding: 20px;
+  background-color: $background-color;
+
+  @include respond-to(sm) {
+    padding: 25px;
+  }
+
+  @include respond-to(md) {
+    padding: 40px 35px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px 35px;
+  }
+
+  .intro-blocks {
+    margin: 0 auto 1px auto;
+    width: 100%;
+
+    @include respond-to(md) {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    @include respond-to(lg) {
+      width: 70%;
+    }
+
+    &__title {
+      margin: 0 0 10px 0;
+      font-family: $heading-font;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include respond-to(sm) {
+        font-size: 35px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 62px;
+      }
+    }
+
+    &__divider {
+      margin: 15px auto;
+      width: 40%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.09);
+
+      @include respond-to(lg) {
+        margin: 35px auto;
+      }
+    }
+
+    &__info {
+      margin-bottom: 15px;
+      font-family: $body-font;
+      font-size: 12px;
+      color: #333;
+      text-align: center;
+
+      @include respond-to(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+}

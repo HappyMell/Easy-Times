@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
 import Flickity from "react-flickity-component"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import { SRLWrapper } from "simple-react-lightbox"
 import "react-tabs/style/react-tabs.scss"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 let flickityOptions = {
   cellAlign: "left",
@@ -16,9 +16,9 @@ let flickityOptions = {
   autoPlay: true,
 }
 
-const IndexPage = ({ data }) => (
+const HomeTemplate = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title={data.wordpressPage.title} />
     <section className="hero-slider">
       <Flickity
         className={"carousel mask"}
@@ -215,11 +215,11 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-export default IndexPage
+export default HomeTemplate
 
 export const query = graphql`
-  query {
-    wordpressPage(wordpress_id: { eq: 7 }) {
+  query($id: Int!) {
+    wordpressPage(wordpress_id: { eq: $id }) {
       title
       content
       excerpt

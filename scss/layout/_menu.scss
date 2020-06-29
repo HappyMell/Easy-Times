@@ -1,0 +1,558 @@
+.menu {
+  background-color: #fff;
+  background-position: -261% 50%;
+  background-size: cover;
+  padding: 0px;
+  background-repeat: no-repeat;
+
+  @include respond-to(md) {
+    background-position: 100% 50%;
+    background-size: auto 1000px;
+  }
+
+  &__overlay {
+    padding: 25px;
+    background-color: #fff;
+    background-image: none;
+
+    @include respond-to(md) {
+      padding: 50px 35px;
+      background-color: hsla(0, 0%, 100%, 0.9);
+    }
+
+    @include respond-to(lg) {
+      padding: 100px 35px;
+      background-color: hsla(0, 0%, 100%, 0.4);
+    }
+
+    .menu-tabs {
+      position: relative;
+
+      @include respond-to(sm) {
+        text-align: left;
+      }
+
+      .menu-tabs-menu {
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+        margin-left: 0;
+
+        @include respond-to(sm) {
+          display: flex;
+          justify-content: center;
+          margin-top: 25px;
+        }
+
+        @include respond-to(md) {
+          margin-top: 45px;
+        }
+
+        .ui-btn {
+          list-style: none;
+          background-color: #faf3eb;
+          color: #fff;
+
+          .tab-button {
+            border: none;
+            background: transparent;
+            display: block;
+            padding: 9px 20px;
+            margin-bottom: 2px;
+            color: #ab9f91;
+            border-radius: 3px;
+            width: 100%;
+            font-family: $heading-font;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            @include respond-to(sm) {
+              padding: 9px 45px;
+            }
+
+            &:hover {
+              background-color: #3d3935;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .tabs-content {
+        padding-top: 35px;
+
+        .pane {
+          position: relative;
+
+          .white-wrapper {
+            @include respond-to(md) {
+              padding: 23px 13px 3px 0;
+            }
+
+            @include respond-to(lg) {
+              background: rgba(255, 255, 255, 0.7);
+            }
+
+            .collection-list {
+              display: block;
+
+              @include respond-to(md) {
+                margin: 0 -10px;
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+              .list-item {
+                padding: 0 57px 7px 0;
+                position: relative;
+                margin-bottom: 7px;
+                border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+                @include respond-to(md) {
+                  padding: 0 72px 10px 10px;
+                  margin-bottom: 10px;
+                  flex: 0 0 50%;
+                }
+
+                @include respond-to(lg) {
+                  padding: 0 90px 15px 10px;
+                  margin-bottom: 15px;
+                }
+
+                .price {
+                  margin-top: 9px;
+                  padding: 0 9px;
+                  position: absolute;
+                  top: 3%;
+                  right: 0;
+                  left: auto;
+                  bottom: auto;
+                  background-color: $brand-color;
+                  color: #fff;
+                  font-family: "Open Sans";
+                  font-weight: 700;
+                  line-height: 24px;
+                  border-radius: 3px;
+                  font-size: 12px;
+
+                  @include respond-to(lg) {
+                    right: 5%;
+                    font-size: 14px;
+                  }
+                }
+
+                .item-title {
+                  margin-bottom: 3px;
+                  font-family: $body-font;
+                  font-weight: 700;
+                  font-size: 14px;
+
+                  @include respond-to(lg) {
+                    font-size: 15px;
+                  }
+                }
+
+                .item-sub-title {
+                  margin-bottom: 3px;
+                  font-size: 11px;
+                  color: #9e9e9e;
+                  font-style: italic;
+
+                  @include respond-to(lg) {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-button {
+      margin: 5px auto 0 0;
+      padding: 4px 15px;
+      width: 100%;
+      font-family: $heading-font;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 30px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #2b2825;
+      box-shadow: none;
+      transition-duration: 0.4s;
+      border: none;
+      border-radius: 3px;
+
+      @include respond-to(sm) {
+        width: auto;
+        padding: 4px 25px;
+        margin: 10px 6px 0 0;
+        display: inline-block;
+        text-align: center;
+      }
+      &:hover {
+        background-color: $brand-color;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.menu-section {
+  padding: 0 20px 25px 20px;
+  background-color: #faf3eb;
+
+  @include respond-to(md) {
+    padding: 0 35px 25px 35px;
+  }
+
+  @include respond-to(lg) {
+    padding: 0 35px 80px 35px;
+  }
+
+  .menu-tabs {
+    position: relative;
+
+    .menu-tabs-menu {
+      margin-top: -55px;
+      margin-left: 0;
+
+      @include respond-to(md) {
+        margin-top: -120px;
+        display: flex;
+      }
+
+      @include respond-to(lg) {
+        margin-top: -70px;
+        position: relative;
+      }
+
+      li {
+        padding: 12px 15px;
+        height: 55px;
+        width: 100%;
+        background-color: #333;
+        list-style: none;
+        transition-duration: 0.4s;
+        margin: 0;
+
+        @include respond-to(md) {
+          padding: 19px 15px 0 15px;
+          width: 25%;
+          height: 120px;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        @include respond-to(lg) {
+          padding: 19px 30px 9px 58px;
+          width: 25%;
+          height: 70px;
+          display: inline-block;
+        }
+
+        button {
+          display: flex;
+          border: none;
+          background: transparent;
+
+          @include respond-to(md) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          @include respond-to(lg) {
+            position: relative;
+            flex-direction: row;
+          }
+
+          img {
+            height: 26px;
+            margin: 0 14px 9px 0;
+            max-width: 100%;
+
+            @include respond-to(md) {
+              margin: 0 0 9px 0;
+              height: 29px;
+            }
+          }
+
+          .title {
+            font-family: $heading-font;
+            font-weight: 700;
+            color: #fff;
+            font-size: 15px;
+            line-height: 13px;
+            text-transform: uppercase;
+
+            @include respond-to(md) {
+              font-size: 18px;
+              text-align: center;
+              line-height: 20px;
+            }
+          }
+
+          .details {
+            margin-top: 4px;
+            font-family: $heading-font;
+            font-weight: 400;
+            font-size: 10px;
+            color: #fff;
+            opacity: 0.49;
+            line-height: 14px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          background-color: $brand-color;
+          cursor: pointer;
+        }
+      }
+
+      .ui-tabs-active {
+        background-color: $brand-color !important;
+      }
+    }
+
+    .tabs-content {
+      position: relative;
+
+      .pane {
+        //  padding-top: 25px;
+
+        @include respond-to(md) {
+          //  padding-top: 45px;
+        }
+
+        @include respond-to(lg) {
+          // padding-top: 100px;
+        }
+
+        .white-wrapper {
+          .collection-list {
+            @include respond-to(md) {
+              margin: 0 -10px;
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .list-item {
+              padding: 0 57px 7px 0;
+              margin-bottom: 7px;
+              position: relative;
+              border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+              @include respond-to(md) {
+                padding: 0 72px 10px 10px;
+                margin-bottom: 10px;
+                flex: 0 0 50%;
+              }
+
+              @include respond-to(lg) {
+                padding: 0 90px 15px 10px;
+                margin-bottom: 15px;
+              }
+
+              .price {
+                margin-top: 9px;
+                padding: 0 9px;
+                position: absolute;
+                top: 3px;
+                right: 0px;
+                color: #fff;
+                font-family: "Open Sans";
+                font-weight: 700;
+                background-color: $brand-color;
+                line-height: 24px;
+                border-radius: 3px;
+                font-size: 12px;
+
+                @include respond-to(md) {
+                  right: 11px;
+                }
+
+                @include respond-to(lg) {
+                  right: 24px;
+                }
+              }
+
+              .item-title {
+                margin-bottom: 3px;
+                font-family: $body-font;
+                font-weight: 700;
+                font-size: 14px;
+
+                @include respond-to(lg) {
+                  font-size: 15px;
+                }
+              }
+
+              .item-sub-title {
+                margin-bottom: 3px;
+                font-size: 11px;
+                color: #9e9e9e;
+                font-style: italic;
+
+                @include respond-to(lg) {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tried-section {
+  background-position: -261% 50%;
+  background-size: cover;
+  background-color: #fff;
+  padding: 0px;
+
+  @include respond-to(lg) {
+    background-position: 100% 50%;
+    background-size: auto 1000px;
+    background-repeat: no-repeat;
+  }
+
+  &__overlay {
+    padding: 25px;
+    background-color: #fff;
+    background-image: none;
+
+    @include respond-to(md) {
+      padding: 50px 35px;
+      background-color: hsla(0, 0%, 100%, 0.9);
+    }
+
+    @include respond-to(lg) {
+      padding: 100px 35px;
+      background-color: hsla(0, 0%, 100%, 0.4);
+    }
+
+    .title {
+      margin: 0 0 10px 0;
+      font-family: $heading-font;
+      font-weight: 700;
+      font-size: 26px;
+      color: #333;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include respond-to(md) {
+        font-size: 35px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 62px;
+      }
+    }
+
+    .divider {
+      margin: 15px auto;
+      width: 40%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.09);
+
+      @include respond-to(lg) {
+        margin: 35px auto 25px auto;
+      }
+    }
+
+    .white-wrapper {
+      background-color: #fff;
+
+      @include respond-to(md) {
+        padding: 23px 13px 3px 0;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+      @include respond-to(lg) {
+        padding: 23px 13px 3px 0;
+        background-image: linear-gradient(
+          90deg,
+          #fff 68%,
+          hsla(0, 0%, 100%, 0.013)
+        );
+      }
+
+      .collection-list {
+        @include respond-to(md) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        @include respond-to(lg) {
+          margin: 0 -10px;
+        }
+
+        .list-item {
+          padding: 0 57px 7px 0;
+          margin-bottom: 7px;
+          position: relative;
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+          @include respond-to(md) {
+            flex: 0 0 50%;
+          }
+
+          @include respond-to(lg) {
+            padding: 0 90px 15px 10px;
+            margin-bottom: 15px;
+          }
+
+          .price {
+            margin-top: 9px;
+            padding: 0 9px;
+            position: absolute;
+            top: 3px;
+            right: 0px;
+            color: #fff;
+            font-family: "Open Sans";
+            font-weight: 700;
+            background-color: $brand-color;
+            line-height: 24px;
+            border-radius: 3px;
+            font-size: 12px;
+
+            @include respond-to(md) {
+              right: 11px;
+            }
+          }
+
+          .item-title {
+            margin-bottom: 3px;
+            font-family: $body-font;
+            font-weight: 700;
+            font-size: 14px;
+
+            @include respond-to(lg) {
+              font-size: 15px;
+            }
+          }
+
+          .item-sub-title {
+            margin-bottom: 3px;
+            font-size: 11px;
+            color: #9e9e9e;
+            font-style: italic;
+
+            @include respond-to(lg) {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

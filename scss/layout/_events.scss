@@ -1,0 +1,139 @@
+.events {
+  padding: 20px;
+
+  @include respond-to(sm) {
+    padding: 25px;
+  }
+
+  @include respond-to(md) {
+    padding: 40px 35px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px 35px;
+  }
+
+  .list-wrapper {
+    .list {
+      .item {
+        .events-item {
+          margin-bottom: 10px;
+          display: flex;
+
+          @include respond-to(lg) {
+            margin-bottom: 20px;
+          }
+
+          .contact-col {
+            position: relative;
+            flex: 0 0 50%;
+
+            .image {
+              width: 100%;
+              height: 170px;
+              border-radius: 4px;
+              background-position: 50% 50%;
+              background-size: cover;
+              overflow: hidden;
+              cursor: pointer;
+
+              .image-link {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                color: $brand-color;
+                // transition-duration: 0.4s;
+                transition: background-color 200ms ease;
+                background-color: transparent;
+
+                &:hover {
+                  background-color: rgba(232, 143, 42, 0.8);
+                }
+              }
+
+              @include respond-to(md) {
+                height: 230px;
+              }
+
+              @include respond-to(lg) {
+                height: 300px;
+              }
+            }
+          }
+
+          .col-right {
+            padding: 0 0 15px 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 49%;
+
+            @include respond-to(sm) {
+              padding: 32px 15px 0 15px;
+            }
+
+            @include respond-to(md) {
+              padding: 32px 25px 0 25px;
+            }
+
+            @include respond-to(lg) {
+              padding: 32px 45px 45px;
+            }
+
+            &__link {
+              font-family: $heading-font;
+              font-weight: 700;
+              font-size: 17px;
+              line-height: 17px;
+              color: #333;
+              text-transform: uppercase;
+              text-align: center;
+
+              @include respond-to(sm) {
+                font-size: 25px;
+                line-height: 26px;
+              }
+
+              @include respond-to(lg) {
+                font-size: 45px;
+                line-height: 36px;
+              }
+            }
+
+            &__divider {
+              margin: 15px auto;
+              width: 40%;
+              height: 1px;
+              background-color: rgba(0, 0, 0, 0.09);
+
+              @include respond-to(lg) {
+                margin: 35px auto 25px auto;
+              }
+            }
+
+            .dark-button {
+              margin: 5px auto 0 auto;
+              padding: 4px 15px;
+              font-size: 12px;
+              line-height: 30px;
+
+              @include respond-to(sm) {
+                margin-top: 10px;
+                padding: 4px 25px;
+                line-height: 30px;
+              }
+
+              @include respond-to(md) {
+                line-height: 31px;
+              }
+
+              @include respond-to(lg) {
+                line-height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

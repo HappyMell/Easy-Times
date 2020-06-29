@@ -1,0 +1,262 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.page-header {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: $main-dark-color;
+  background-position: 50% 50%;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: auto;
+  z-index: 230;
+
+  @include respond-to(md) {
+    width: 220px;
+    height: 100%;
+    position: fixed;
+  }
+
+  @include respond-to(lg) {
+    width: 300px;
+  }
+
+  &__overlay {
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: rgba(61, 56, 51, 0.9);
+    background-image: linear-gradient(0deg, rgba(61, 56, 51, 0), #3d3833);
+
+    @include respond-to(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--container {
+      max-width: none;
+      position: static;
+      display: flex;
+      justify-content: space-between;
+
+      .logo-container {
+        // margin-top: 13px;
+        padding: 11px 0 0 10px;
+        width: 240px;
+        position: relative;
+        display: flex;
+
+        @include respond-to(md) {
+          padding: 35px 0 25px 0;
+          text-align: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        img {
+          margin: 0 9px 13px 20px;
+          height: 35px;
+          max-width: 100%;
+          opacity: 0.3;
+
+          @include respond-to(md) {
+            margin-bottom: 13px;
+            height: 45px;
+          }
+        }
+
+        h1 {
+          font-size: 19px;
+          font-family: $heading-font;
+          color: #fff;
+          text-transform: uppercase;
+          line-height: 28px;
+          margin: 0;
+
+          @include respond-to(md) {
+            font-size: 28px;
+          }
+        }
+
+        h2 {
+          font-size: 10px;
+          font-family: $heading-font;
+          color: #fff;
+          letter-spacing: 3px;
+          font-weight: 300;
+          text-transform: uppercase;
+          opacity: 0.3;
+          margin: 0;
+        }
+      }
+    }
+
+    .divider {
+      display: none;
+      width: 50%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+
+      @include respond-to(md) {
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    .page-header-large {
+      display: none;
+
+      @include respond-to(md) {
+        display: block;
+        width: 100%;
+
+        ul {
+          margin: 10px 0 5px 0;
+          list-style: none;
+          position: relative;
+          font-size: 14px;
+          line-height: 20px;
+          height: auto;
+          width: 100%;
+
+          li {
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+            display: block;
+
+            &:hover {
+              background-color: $brand-color;
+            }
+
+            a {
+              font-family: $heading-font;
+              font-weight: 400;
+              color: #fff;
+              line-height: 5px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+
+            .active {
+              color: $brand-color;
+            }
+          }
+        }
+      }
+    }
+
+    .contact {
+      display: none;
+      background: transparent;
+
+      @include respond-to(md) {
+        display: flex;
+        margin-top: 25px;
+
+        a {
+          margin: 0 4px;
+
+          img {
+            height: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    // display: none;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    // height: 243px;
+    background: #262321;
+    z-index: 5;
+
+    ul {
+      margin: 0;
+      text-align: center;
+
+      li {
+        padding: 15px 20px;
+
+        //font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        a {
+          display: block;
+          font-family: $heading-font;
+          color: #fff;
+          font-size: 13px;
+          line-height: 5px;
+          text-transform: uppercase;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          background-color: $brand-color;
+          color: #fff;
+        }
+      }
+
+      .active {
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: #333;
+}
+.flickity-button:hover {
+  background: #f90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 70px;
+  border-radius: 0px;
+
+  @include respond-to(lg) {
+    width: 100px;
+    height: 80px;
+  }
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+
+  @include respond-to(lg) {
+    width: 22% !important;
+    left: 39% !important;
+  }
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  border: none;
+}
+.flickity-prev-next-button.next {
+  right: 0px;
+  position: absolute;
+  top: 50%;
+  border: none;
+}

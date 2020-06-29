@@ -1,0 +1,37 @@
+.about {
+  padding: 20px;
+  background-color: $background-color;
+
+  @include respond-to(md) {
+    padding: 40px 35px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px 35px;
+  }
+
+  .intro-block {
+    @include respond-to(md) {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    @include respond-to(lg) {
+      width: 43%;
+    }
+
+    .paragraph {
+      text-align: center;
+      margin-bottom: 15px;
+      line-height: 20px;
+      font-family: $body-font;
+      font-weight: 400;
+      font-size: 12px;
+      color: #333;
+
+      @include respond-to(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+}

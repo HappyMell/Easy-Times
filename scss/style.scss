@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+// 2. Vendors
+@import "vendor/normalize", "vendor/wp-core";
+
+// 3. Base stuff
+@import "base/base", "base/fonts", "base/typography", "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/header", "layout/footer", "layout/hero", "layout/about",
+  "layout/background-image", "layout/menu", "layout/bottom", "layout/gallery",
+  "layout/parties", "layout/events", "layout/workshop", "layout/blog",
+  "layout/contact", "layout/reserve", "layout/visit";
+
+// 5. Components
+@import "components/button", "components/hamburger", "components/headings",
+  "components/blocks", "components/sections";

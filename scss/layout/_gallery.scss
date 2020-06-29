@@ -1,0 +1,142 @@
+.gallery {
+  padding: 20px;
+  background-color: $background-color;
+
+  @include respond-to(md) {
+    padding: 40px 35px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px 35px;
+  }
+
+  .width {
+    display: flex;
+
+    .left {
+      width: 50%;
+      padding-right: 10px;
+
+      .lightbox-two {
+        margin-bottom: 10px;
+        display: inline-block;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .gallery-row {
+        @include respond-to(md) {
+          margin: 0 -10px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .col {
+          position: relative;
+          flex: 0 0 50%;
+
+          @include respond-to(md) {
+            padding: 0 10px;
+          }
+
+          .lightbox-one {
+            margin-bottom: 10px;
+            display: inline-block;
+
+            @include respond-to(lg) {
+              margin-bottom: 20px;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              max-width: 100%;
+              border-radius: 4px;
+
+              @include respond-to(md) {
+                height: 80px;
+                width: 120px;
+              }
+
+              @include respond-to(lg) {
+                height: 150px;
+                width: 225px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      @include respond-to(md) {
+        padding-left: 20px;
+      }
+
+      .lightbox-two {
+        margin-bottom: 10px;
+        display: inline-block;
+
+        @include respond-to(lg) {
+          margin-bottom: 20px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .row {
+        @include respond-to(md) {
+          margin: 0 -10px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .col {
+          position: relative;
+          flex: 0 0 50%;
+
+          @include respond-to(md) {
+            padding: 0 10px;
+          }
+
+          .lightbox-one {
+            margin-bottom: 10px;
+            display: inline-block;
+
+            @include respond-to(lg) {
+              margin-bottom: 20px;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              max-width: 100%;
+              border-radius: 4px;
+
+              @include respond-to(md) {
+                height: 80px;
+                width: 120px;
+              }
+
+              @include respond-to(lg) {
+                height: 150px;
+                width: 225px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

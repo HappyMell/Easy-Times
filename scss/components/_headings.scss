@@ -1,0 +1,112 @@
+h1 {
+  font-family: $body-font;
+  font-weight: 700;
+  font-size: 38px;
+  margin: 20px 0 10px 0;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: $body-font;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: $body-font;
+  font-weight: 700;
+  color: $brand-color;
+  margin: 15px 0;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: $body-font;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+h5 {
+  font-family: $body-font;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+h6 {
+  font-size: 12px;
+  font-family: $body-font;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.intro-title {
+  font-family: 'Satisfy';
+  color: $brand-color;
+  font-size: 17px;
+  margin-bottom: 7px;
+  text-align: center;
+  text-shadow: 90deg, 6px rgba(0, 0, 0, 0.2);
+  line-height: 20px;
+
+  @include respond-to(sm) {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(lg) {
+    font-size: 26px;
+    margin-bottom: 14px;
+    line-height: 20px;
+  }
+}
+
+.title {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-family: $heading-font;
+  font-weight: 700;
+  font-size: 26px;
+  color: #333;
+  text-transform: uppercase;
+
+  @include respond-to(sm) {
+    font-size: 35px;
+  }
+
+  @include respond-to(lg) {
+    font-size: 62px;
+    line-height: 66px;
+  }
+}
+
+.sub-title {
+  text-align: center;
+  margin: 1px 0 0 0;
+  font-family: $heading-font;
+  font-weight: 400;
+  font-size: 15px;
+  color: #c7b9a9;
+  text-transform: uppercase;
+
+  @include respond-to(sm) {
+    font-size: 18px;
+  }
+
+  @include respond-to(md) {
+    font-size: 22px;
+    margin: 5px 0 15px 0;
+  }
+}
+
+.divider {
+  margin: 15px auto;
+  width: 40%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.09);
+
+  @include respond-to(lg) {
+    margin: 35px auto 25px auto;
+  }
+}

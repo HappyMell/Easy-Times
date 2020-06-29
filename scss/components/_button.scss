@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.dark-button {
+  margin: 15px 6px 0 0;
+  padding: 4px 25px;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  background: #2b2825;
+  border: none;
+  border-radius: 3px;
+  line-height: 40px;
+  transition-duration: 0.4s;
+  text-align: center;
+
+  &:hover {
+    background: $brand-color;
+  }
+}
+
+.btn {
+  // margin: 15px 6px 0 0;
+  // padding: 4px 25px;
+  font-family: $heading-font !important;
+  text-transform: uppercase;
+  width: 25% !important;
+  font-size: 14px !important;
+  color: #fff;
+  background: #2b2825;
+  border: none !important;
+  border-radius: 3px !important;
+  line-height: 40px;
+  transition-duration: 0.4s;
+  text-align: center;
+
+  &:hover {
+    background: $brand-color;
+    cursor: pointer;
+  }
+}
+
+.clear-button {
+  margin: 15px 6px 0 0;
+  padding: 4px 25px;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 3px;
+  line-height: 40px;
+  transition-duration: 0.4s;
+
+  &:hover {
+    background: #2b2825;
+    color: #fff;
+  }
+}
